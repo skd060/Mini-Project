@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <title>FillUp</title>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/scoring.js"></script>
+</head>
+
+<body style="background-color: #000">
+  <div id="header">
+    <div id="logo">
+      <img src="img/favicon.png" />
+      <h1 style="color:#6A5ACD ">FillUp</h1>
+    </div>
+<!--    <div id="user">
+      <img src="" />
+      <h2 id="name"></h2>
+      <h2 id="logout" onClick="logout();">Logout</h2>
+    </div> -->
+  </div>
+
+	<canvas id="myCanvas" width="800" height="750">
+		No canvas available!
+	</canvas>
+  <h2 id="player" style="text-transform: uppercase;text-shadow: 1px 1px rgba(0,0,0,.4)">player</h2>
+  <h3 id="scoreTracker">Score: 0</h3>
+
+  <div id="rulesModal" class="modal">
+    <h1>Welcome to FillUp!</h1>
+    <div id="playerName" >Player Name</div>
+    <h2 >Rules</h2>
+    <p style="color: #fff">Dots connected by a line can't have the same color.</p>
+    <p style="color: #fff">The player has to fill all the vertices with the color within the given time.</p>
+    <p style="color: #fff">Press 'P' to pause.</p>
+    <p style="color: #fff">You get bonus points for using less than 3 colors.</p>
+    <div id="startGame">Start Game</div>
+    <p id="names">Created by <a style="color: #9999ff" href="https://www.facebook.com/sureshkumar.dhayal.3" target="_blank">Suresh Kumar Dhayal</a>, <a style="color: #9999ff" href="https://www.facebook.com/milindchauhan95?fref=ts" target="_blank">Milind Chauhan</a>, and <a style="color: #9999ff" href="https://www.facebook.com/navratnas1?pnref=friends.search" target="_blank">Navratna Sharma</a></p>
+  </div>
+
+  <div id="nextLevelModal" class="modal">
+    <h1></h1>
+    <p>
+      <span class="fontawesome-star"></span>
+      <span class="fontawesome-star"></span>
+      <span class="fontawesome-star"></span>
+      <span class="fontawesome-star"></span>
+      <span class="fontawesome-star"></span>
+    </p>
+    <h2></h2>
+  </div>
+
+  <div id="invalidColorModal" class="modal">
+    <h2>You can't have two neighbors of the same color</h2>
+  </div>
+ 
+  <div id="pauseModal" class="modal">
+    <h1>Paused</h1>
+    <h2>Press 'P' or Click Screen to Continue</h2>
+  </div>
+
+  <div id="endGameModal" class="modal">
+    <h1>Your time is up!</h1>
+    <h2></h2>
+    <div id="playAgain">
+      Play Again?
+    </div>
+  </div>
+
+  <h3 id="timer"></h3>
+  <div id="myModal" class="model">
+<!-- Modal content -->
+<div class="modal-content">
+<span id="clos" class="close">x</span>
+<form>
+  <p>Player name:</p><br>
+    <input id="myText" type="text" name="playername">
+    <div id="submit" >Submit </div>
+</form>
+</div>
+</div>
+
+<script type="text/javascript" src="js/ui.js"></script>
+</body>	
+</html>
